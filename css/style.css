@@ -73,6 +73,7 @@ body {
     font-family: Montserrat;
     font-weight: 600;
     margin-right: 30px;
-    border-bottom: 1px solid orange;
+    border-bottom: 3px solid orange;
+    box-sizing: border-box;
     height: 100%;
 }
