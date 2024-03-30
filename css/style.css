@@ -3,6 +3,22 @@
     src: url('../font/Montserrat-VariableFont_wght.ttf');
 }
 
+/* @font-face {
+    font-family: BeVietnamPro;
+    src: url('../font/BeVietnamPro-Black.ttf');
+} */
+
+@font-face {
+    font-family: DancingScript;
+    src: url('../font/DancingScript-VariableFont_wght.ttf');
+}
+
+* {
+    font-family: Montserrat;
+    color: white;
+    font-size: 18px;
+}
+
 body {
     padding: 0px;
     margin: 0px;
@@ -39,8 +55,7 @@ body {
     text-align: center;
     margin: 0px;
     color: #ffc330;
-    font-size: 33px;
-    font-family: Montserrat;
+    font-size: 39px;
     font-weight: 700;
     text-shadow: 1px 0 0 #8d0e0e, -1px 0 0 #8d0e0e, 0 1px 0 #8d0e0e, 0 -1px 0 #8d0e0e, 1px 1px #8d0e0e, -1px -1px 0 #8d0e0e, 1px -1px 0 #8d0e0e, -1px 1px 0 #8d0e0e;
 }
@@ -52,9 +67,11 @@ body {
     background-color: white;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .img-logo {
+    margin-left: 50px;
     height: 40px;
     width: 100px;
 }
@@ -63,17 +80,75 @@ body {
     display: flex;
     margin-left: 50px;
     height: 100%;
+    align-items: center;
 }
 
 .menu-item {
+    cursor: pointer;
     display: flex;
     align-items: center;
     color: #154f28;
-    font-size: 16px;
-    font-family: Montserrat;
-    font-weight: 600;
+    font-weight: 700;
     margin-right: 30px;
-    border-bottom: 3px solid orange;
     box-sizing: border-box;
     height: 100%;
+    position: relative;
+}
+
+.menu-item::after {
+    transform: scale(0);
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transition: 200ms ease-in;
+    background: #d6a733;
+}
+
+.menu-item:hover:not(.active-menu-item)::after {
+    transform: scale(1);
+}
+
+.active-menu-item {
+    border-bottom: 3px solid #d6a733;
+}
+
+.sub-menu {
+    z-index: 1000;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    display: none;
+    flex-direction: column;
+    width: 200px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transform: translateY(100%);
+}
+
+.sub-menu-item {
+    color: #154f28;
+    cursor: pointer;
+    text-indent: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.sub-menu-item:last-child {
+    border-bottom: 0px;
+}
+
+.menu-item:hover .sub-menu {
+    display: flex;
+    animation-name: example;
+    animation-duration: 0.5s;
+}
+
+.sub-menu-item:hover {
+    color: white;
+    background: #154f28;
 }
