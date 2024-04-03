@@ -45,3 +45,35 @@
     font-size: 15px;
     color: black;
 }
+
+.main-product {
+    margin-top: 30px;
+}
+
+.main-product-title {
+    position: relative;
+}
+
+.main-product-title h1 {
+    font-size: 33px;
+    font-weight: 700;
+    color: #154f28;
+    text-align: center;
+}
+
+.main-product-title h1::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 250px;
+    background: #d6a733;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 10px);
+}
+
+.product-item h1,
+.product-item p {
+    color: black;
+}
