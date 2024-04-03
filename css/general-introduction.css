@@ -1,0 +1,47 @@
+.general-introduction {
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    align-items: center;
+}
+
+.general-introduction-title {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(128, 128, 128, 0.05);
+    font-size: 33px;
+    font-weight: 700;
+    color: black;
+    border-top: 1px solid rgba(21, 21, 21, 0.1);
+    border-bottom: 1px solid rgba(21, 21, 21, 0.1);
+}
+
+.general-introduction-content {
+    display: flex;
+    width: 60%;
+}
+
+.general-introduction-content .img-content {
+    flex: 1;
+    margin-right: 30px;
+    padding: 30px;
+}
+
+.general-introduction-content .img-content img {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.general-introduction-content .text-content {
+    flex: 1;
+}
+
+.general-introduction-content .text-content p {
+    margin-top: 30px;
+    font-size: 15px;
+    color: black;
+}
